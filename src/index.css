@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Styles for the images in the gallery */
+.image-gallery .image {
+  width: 150px; /* Set the width of your images */
+  height: 150px; /* Set the height of your images */
+  margin: 5px;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+/* Styles for the image while being dragged */
+.image-gallery .image.dragging {
+  transform: scale(1.1); /* Apply a scale transform when dragging */
+  transition: none; /* Disable the transition while dragging */
+  opacity: 0.7; /* Reduce opacity for the dragged image */
+}
+/* Image Gallery Container */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Image Container */
+.image {
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.2s;
+}
+
+/* Feature Image */
+.feature-image {
+  width: 200px;
+  height: 200px;
+  scale: 1.03;
+}
+/* Normal Image */
+.normal-image {
+  width: 200px;
+  height: 200px;
+}
+
+/* Selected Image */
+.selected {
+  border-color: #007bff; /* You can choose a different color */
+}
+
+/* Dragging Image */
+.dragging {
+  transform: scale(1.05);
+}
