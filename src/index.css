@@ -1,55 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* Styles for the images in the gallery */
+
+/* * {
+  font-family: "Roboto Slab", serif;
+} */
 .image-gallery .image {
-  width: 150px; /* Set the width of your images */
-  height: 150px; /* Set the height of your images */
+  width: 150px;
+  height: 150px;
   margin: 5px;
   display: inline-block;
   cursor: pointer;
   transition: transform 0.2s;
 }
 
-/* Styles for the image while being dragged */
 .image-gallery .image.dragging {
-  transform: scale(1.1); /* Apply a scale transform when dragging */
-  transition: none; /* Disable the transition while dragging */
-  opacity: 0.7; /* Reduce opacity for the dragged image */
+  transform: scale(1.1);
+  transition: none;
+  opacity: 0.7;
 }
-/* Image Gallery Container */
 .image-gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
 }
-
-/* Image Container */
 .image {
   border-radius: 8px;
   cursor: pointer;
   overflow: hidden;
   transition: border-color 0.3s, transform 0.2s;
 }
-
-/* Feature Image */
 .feature-image {
   width: 200px;
   height: 200px;
   scale: 1.03;
+  border-top-left-radius: 10px; /* Adjust the radius value as needed */
+  border-bottom-right-radius: 10px;
 }
-/* Normal Image */
 .normal-image {
   width: 200px;
   height: 200px;
 }
 
-/* Selected Image */
 .selected {
-  border-color: #007bff; /* You can choose a different color */
+  border-color: #007bff;
 }
 
-/* Dragging Image */
 .dragging {
   transform: scale(1.05);
+}
+.header {
+  color: #f2f8f5;
+  font-family: Poppins, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.header-span {
+  background: -webkit-linear-gradient(#23bfb8, #85ea80);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 6px transparent;
 }
